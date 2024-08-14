@@ -1,0 +1,15 @@
+<div>
+    <h2>Listado de Registros</h2>
+    <button (click)="addRegistro()">Añadir Registro</button>
+
+    <ul>
+      <li *ngFor="let registro of registros">
+        {{ registro.razon_social }} - {{ registro.direccion }}
+        <button (click)="deleteRegistro(registro.id_registro)">Eliminar</button>
+        <a [routerLink]="['/edit', registro.id_registro]">Editar</a>
+      </li>
+    </ul>
+    <button (click)="currentPage > 1 && loadRegistros(currentPage - 1)">Anterior</button>
+    <button (click)="currentPage < totalPages && loadRegistros(currentPage + 1)">Siguiente</button>
+  </div>
+  

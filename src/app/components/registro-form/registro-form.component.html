@@ -1,0 +1,34 @@
+<div>
+    <h2>{{ isEditing ? 'Editar Registro' : 'Añadir Registro' }}</h2>
+    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+      <label for="estado">Estado:</label>
+      <input id="estado" formControlName="estado">
+  
+      <label for="id">ID:</label>
+      <input id="id" formControlName="id">
+  
+      <label for="matricula">Matrícula:</label>
+      <input id="matricula" formControlName="matricula">
+  
+      <label for="razon_social">Razón Social:</label>
+      <input id="razon_social" formControlName="razon_social">
+  
+      <label for="cod_estado_actualizacion">Código Estado Actualización:</label>
+      <input id="cod_estado_actualizacion" formControlName="cod_estado_actualizacion">
+  
+      <label for="cod_departamento">Código Departamento:</label>
+      <input id="cod_departamento" formControlName="cod_departamento">
+  
+      <label for="id_establecimiento">ID Establecimiento:</label>
+      <input id="id_establecimiento" formControlName="id_establecimiento">
+  
+      <label for="direccion">Dirección:</label>
+      <input id="direccion" formControlName="direccion">
+  
+      <label for="respuesta_json">Respuesta JSON:</label>
+      <textarea id="respuesta_json" formControlName="respuesta_json"></textarea>
+  
+      <button type="submit">{{ isEditing ? 'Actualizar Registro' : 'Añadir Registro' }}</button>
+    </form>
+  </div>
+  
